@@ -1,0 +1,9 @@
+version: "3.6"
+services:
+    react_letmeask:
+        image: react_letmeask
+        restart: always
+        ports:
+            - 3003:3000
+        volumes:
+            - ./letmeask:/home/node/app
