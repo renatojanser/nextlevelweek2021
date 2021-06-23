@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo npm install --global yarn
+npm install --global yarn
 
 yarn install
 
