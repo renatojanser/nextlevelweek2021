@@ -1,7 +1,7 @@
 version: "3.6"
 services:
     react_letmeask:
-        image: react_letmeask
+        image: renatojanser/node_app
         restart: always
         ports:
             - 3003:3000
