@@ -20,9 +20,8 @@ type RoomParams = {
 }
 
 export function AdminRoom() {
-    const {user} = useAuth();
+    // const {user} = useAuth();
     const params = useParams<RoomParams>();
-    const [newQuestion, setNewQuestion] = useState('');
     const roomId = params.id;
 
     const { title, questions } = useRoom(roomId);
