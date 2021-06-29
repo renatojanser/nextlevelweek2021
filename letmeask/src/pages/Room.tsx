@@ -6,6 +6,7 @@ import { useAuth } from '../hooks/useAuth';
 import { database } from '../services/firebase';
 
 import { RoomCode } from '../components/RoomCode';
+import { Question } from '../components/Question';
 
 import logoImg from '../assets/images/logo.svg';
 
@@ -130,7 +131,17 @@ export function Room() {
                     </div>
                 </form>
 
-                {JSON.stringify(questions)}
+                <div className="question-list">
+                    {questions.map(question => {
+                        return (
+                            <Question 
+                                key={question.id}
+                                content={question.content}
+                                author={question.author}
+                            />
+                        );
+                    })}
+                </div>
 
             </main>
         </div>
